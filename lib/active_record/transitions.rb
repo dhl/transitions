@@ -27,8 +27,8 @@ module ActiveRecord
     included do
       include ::Transitions
       after_initialize :set_initial_state
-      #validates_presence_of :state
-      #validate :state_inclusion
+      validates_presence_of :state
+      validate :state_inclusion
     end
 
     def reload
